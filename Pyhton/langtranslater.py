@@ -1,8 +1,8 @@
 from translate import Translator
 
-translator= Translator(to_lang="Basque")
+translator= Translator(to_lang="Corsican")
 
-translation = translator.translate(" good night")
+translation = translator.translate(" hello world rvce")
 
 print (translation)
 #from translate import Translator

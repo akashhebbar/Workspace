@@ -22,12 +22,7 @@ ax.legend()
 
 
 def autolabel(rects, xpos='center'):
-    """
-    Attach a text label above each bar in *rects*, displaying its height.
-
-    *xpos* indicates which side to place the text w.r.t. the center of
-    the bar. It can be one of the following {'center', 'right', 'left'}.
-    """
+   
 
     xpos = xpos.lower()  # normalize the case of the parameter
     ha = {'center': 'center', 'right': 'left', 'left': 'right'}
