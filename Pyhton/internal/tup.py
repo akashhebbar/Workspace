@@ -1,5 +1,5 @@
-n1=input("Enter the string")
-n2=input("ENter the string")
+n2=(2,3,4,5)
+n1=(4,7,8,9)
 while True:
     print ("1 -- > join ")
     print ("2 -- > to upper ")
@@ -15,5 +15,5 @@ while True:
         
     elif choice == 2:
        
-        print (n1.upper())
-    elif choice == 4:
+        print (n1*2)
+   # elif choice == 4:
