@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+setInterval("clock()",1000);
+function clock()
+{
+var d=new Date();
+var h=d.getHours();
+var m=d.getMinutes();
+var s=d.getSeconds();
+
+
+document.getElementById("time").innerHTML=h+":"+m+":"+s;
+}
+</script>
+</head>
+<body>
+<p id="time"></p>
+
+</body>
+</html>
+
+
+
+

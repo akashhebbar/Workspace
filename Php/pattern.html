@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+function check()
+{
+var usn=usncheck.usn.value;
+var a=/^\d[A-Z][A-Z]\d\d[A-Z][A-Z][A-Z]\d\d$/;
+if(!usn.match(a))
+{
+alert("invalid");
+}
+else
+{
+alert("valid")
+
+var s=usn.substring(3,5);
+if(s=="18")
+{
+alert("sem1,2018");
+
+}
+else if(s=="17")
+	alert("sem2 year2017");
+}}
+
+</script>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+<form name="usncheck">
+<input type="text" name="usn" id="usn">
+
+
+<input type="submit" value="submit" onclick="check()">
+</form>
+</body>
+</html>
+
