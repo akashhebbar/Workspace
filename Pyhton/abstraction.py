@@ -8,8 +8,9 @@ class a(z):
         print("hello")
 class b(a):
     def show1(self):
-        print("this is b")
-obj= b()
+       print("this is b")
 
+obj=b()
 obj.show()
-obj.show1() 
+obj.show1()
+ 

@@ -13,7 +13,7 @@ while True:
         f = open(a,"w")
         print ("-"*60)
         print ("File ", a," is created ")
-        print ("-"*60) 
+        print("-"*60) 
     elif choice == 2:
         print ("Plz enter alteast Two Meaning Full Pharagraphs ")
         b = input("Enter The contents  \n")
@@ -81,4 +81,4 @@ while True:
     else:
         print ("Invalid Choice")
 
-    
+
