@@ -1,82 +1,45 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include"sort.h"
-#define MAX 100
+#include "in.h"
+#include "selection.h"
 
-void main()
-{
-  int arr[MAX], i, limit, step, temp;
-    // ask user for number of elements to be sorted
-    printf("\n************************************************\n");
-    printf("Enter the number of elements to be sorted: ");
-    scanf("%d", &limit);
-    printf("\n************************************************\n");
-    // input elements if the array
-    for(i = 0; i < limit; i++)
-    {
-      printf("Element %d is %d \n", i+1,arr[i] = rand() % 100 + 1);
-      //arr[i] = rand() % 100 + 1;
-    }
-    printf("\n************************************************\n");
-    printf("Array elements are :- \n");
-    for(i = 0; i < limit; i++)
-    {
-        printf("\t%d",arr[i]);
-    }
+#define MAX 20
 
+int main(){
 
-    printf("\n************************************************\n");
+      int list[50];
+      int i, size;
+      int ch;
+
+      printf("Enter total number of elements:");
+      scanf("%d", &size);
+      printf("Enter the elements:\n");
+      for(i = 0; i < size; i++)
+      {
+           scanf("%d", &list[i]);
+      }
 
     while (1) {
-      int ch;
-      printf("\n************************************************\n");
-      printf("\n1-Bubble Sort \n2-Selection Sort \n3-Insertion Sort \n4-Merge Sort \n5-Quick Sort \n6-Heap Sort \n7-Exit\n");
-      printf("\n************************************************\n");
-      printf("Enter your choice\n");
-      scanf("%d",&ch);
 
-      printf("\n************************************************\n");
+        printf("1-insertion sort\n 2-selection \n");
+      printf("enter choice\n");
+      scanf("%d",&ch );
 
       switch (ch) {
         case 1:
-          printf("\n************* Bubble sort *************\n");
-          bubbleSort(arr,limit);
-          printf("\n************************************************\n");
+          insertion(list);
           break;
         case 2:
-          printf("\n************* Selection sort *************\n");
-          SelectionSort(arr,limit);
-          printf("\n************************************************\n");
-          break;
-        case 3:
-        printf("\n************* Insertion sort *************\n");
-        InsertionSort(arr,limit);
-        printf("\n************************************************\n");
-        break;
-        case 4:
-        printf("\n************* Merge sort *************\n");
-        mergeSort(arr, 0, limit - 1);
-        printf("\nSorted array using merge sort \n");
-        for (i=0; i < limit; i++)
-        printf("%d ", arr[i]);
-        printf("\n************************************************\n");
-        break;
-        case 5:
-        printf("\n************* Quick sort *************\n");
-        quicksort(arr, 0, limit - 1);
-        for (i=0; i < limit; i++)
-        printf("%d ", arr[i]);
-        printf("\n************************************************\n");
-        break;
-        case 6:
-        printf("\n************* Heap sort *************\n");
-        break;
-        case 7:
-        exit(0);
+            exchang(list, size);
 
-
+        printf("Sorted array is...\n");
+        for (i = 0; i < size; i++)
+        {
+            printf("%d\n", list[i]);
+        }
+        break;
 
       }
-
     }
+
+     return 0;
 }
