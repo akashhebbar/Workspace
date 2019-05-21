@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-// main function
+
 int main(void)
 {
 	int hours, minutes, seconds, day, month, year;
@@ -10,8 +10,7 @@ int main(void)
 	// time_t is arithmetic time type
 	time_t now;
 	
-	// Obtain current time
-	// time() returns the current time of the system as a time_t value
+
 	time(&now);
 
 	// Convert to local time format and print to stdout
@@ -21,9 +20,9 @@ int main(void)
 	// to a tm structure with its members filled with the corresponding values
 	struct tm *local = localtime(&now);
 
-	hours = local->tm_hour;			// get hours since midnight	(0-23)
-	minutes = local->tm_min;		// get minutes passed after the hour (0-59)
-	seconds = local->tm_sec;		// get seconds passed after the minute (0-59)
+	hours = local->tm_hour;			
+	minutes = local->tm_min;		
+	seconds = local->tm_sec;		
 
 	day = local->tm_mday;			// get day of month (1 to 31)
 	month = local->tm_mon + 1;		// get month of year (0 to 11)
